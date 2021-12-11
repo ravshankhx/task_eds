@@ -72,9 +72,12 @@ class _AlbumDetailPageState extends State<AlbumDetailPage> {
           },
         ),
       ),
-      body: Center(
+      body: Container(
+        height: double.infinity,
         child: CarouselSlider.builder(
           options: CarouselOptions(
+            scrollDirection: Axis.vertical,
+            autoPlayInterval: Duration(seconds: 2),
             enlargeCenterPage: true,
             enableInfiniteScroll: false,
             autoPlay: true,
@@ -92,8 +95,6 @@ class _AlbumDetailPageState extends State<AlbumDetailPage> {
 
   Widget itemOfList(Photo item) {
     return SizedBox(
-      height: 1500,
-      width: 400,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -101,8 +102,8 @@ class _AlbumDetailPageState extends State<AlbumDetailPage> {
           Image.network(
             item.url.toString(),
             fit: BoxFit.cover,
-            width: 120,
-            height: 120,
+            width: 300,
+            height: 300,
             semanticLabel: item.title.toString(),
           ),
           TextButton(

@@ -8,9 +8,7 @@ import 'package:task_eds/model/users_model.dart';
 
 class Network {
   static String BASE = "jsonplaceholder.typicode.com";
-
   /* Http Apis */
-
   static String API_LIST = "/users";
   static String API_LIST_DETAILS = "/users/";
   static String API_POST = "/posts";
@@ -49,24 +47,7 @@ class Network {
     return params;
   }
 
-  static Map<String, String> paramsCreate(Users user) {
-    Map<String, String> params = {};
-    params.addAll({
-      'id': user.id.toString(),
-      'username': user.username.toString(),
-      'name': user.name.toString(),
-    });
-    return params;
-  }
-
-  static Map<String, String> paramsUpdate(Users user) {
-    Map<String, String> params = {};
-    params.addAll({
-      'id': user.id.toString(),
-      'name': user.name.toString(),
-    });
-    return params;
-  }
+//parse
 
   static List<Users> parseUserslist(String body) {
     dynamic json = jsonDecode(body);

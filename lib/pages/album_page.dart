@@ -84,11 +84,12 @@ class _AlbumPageState extends State<AlbumPage> {
   }
 
   Widget itemOfList(Album item) {
-    return Card(
+    return Container(
+      padding: EdgeInsets.all(5),
       color: Colors.white,
-      margin: EdgeInsets.all(3),
+      margin: EdgeInsets.all(6),
       child: Center(
-        child: SizedBox(
+        child: Container(
           height: double.infinity,
           width: double.infinity,
           child: FlatButton(
@@ -98,9 +99,27 @@ class _AlbumPageState extends State<AlbumPage> {
             },
             textColor: Colors.blue,
             color: Colors.white,
-            child: Text(
-              item.id.toString(),
-              style: const TextStyle(fontSize: 50),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: Row(
+                  children: [
+                Text(
+                item.id.toString(),
+            style: TextStyle(fontSize: 18,color: Colors.grey[400]),)
+                  ],
+                )),
+                Expanded(
+                  flex: 9,
+                  child: Center(child: Text(
+                    item.title.toString(),
+                    style: const TextStyle(fontSize: 16),
+                  ),),
+                )
+
+
+              ],
+
             ),
           ),
         ),

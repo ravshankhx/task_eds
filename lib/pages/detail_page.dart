@@ -37,6 +37,8 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           elevation: 0,
           title: Text('${widget.input.username}'),
@@ -75,7 +77,7 @@ class _DetailPageState extends State<DetailPage> {
                     _openPost();
                   },
                   textColor: Colors.white,
-                  color: Colors.grey[500],
+                  color: Colors.blueGrey[300],
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25)),
                   child: const Text(
@@ -116,7 +118,7 @@ class _DetailPageState extends State<DetailPage> {
       height: 50,
       color: Colors.white,
       padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(bottom: 5),
+      margin: EdgeInsets.only(bottom: 3),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -154,7 +156,7 @@ class _DetailPageState extends State<DetailPage> {
       height: 50,
       color: Colors.white,
       padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(bottom: 5),
+      margin: EdgeInsets.only(bottom: 3),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -195,7 +197,7 @@ class _DetailPageState extends State<DetailPage> {
       height: 50,
       color: Colors.white,
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.only(bottom: 5),
+      margin: const EdgeInsets.only(bottom: 3),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -234,7 +236,7 @@ class _DetailPageState extends State<DetailPage> {
       height: 50,
       color: Colors.white,
       padding: EdgeInsets.all(10),
-      margin: EdgeInsets.only(bottom: 5),
+      margin: EdgeInsets.only(bottom: 3),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -273,7 +275,7 @@ class _DetailPageState extends State<DetailPage> {
         height: 110,
         color: Colors.white,
         padding: EdgeInsets.all(10),
-        margin: EdgeInsets.only(bottom: 5),
+        margin: EdgeInsets.only(bottom: 3),
         child: Column(
           children: [
             Row(
